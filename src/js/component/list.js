@@ -6,7 +6,7 @@ export function List({ list, deleteTask }) {
 		<ul className="list-group">
 			{list.map((task, index) => (
 				<li className="list-group-item p-1 bg-info" key={index}>
-					<p id="task">{task}</p>
+					<p id="task">{task.label}</p>
 					<button className="btn bg-danger" id="delete">
 						<i
 							className="fas fa-times"
