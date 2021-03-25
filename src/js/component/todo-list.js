@@ -103,7 +103,7 @@ export function TodoList() {
 					<input
 						className="col list-group-item w-100"
 						type="text"
-						placeholder="Agregar tarea"
+						placeholder="Agregar tareas"
 						name="taskName"
 						value={task}
 						onChange={handleChange}
@@ -125,7 +125,7 @@ export function TodoList() {
 				<button
 					className="btn btn-secondary"
 					onClick={() => deleteTasks()}>
-					Eliminar todas la tareas
+					Eliminar todas las tareas
 				</button>
 			</div>
 		</div>
