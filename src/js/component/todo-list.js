@@ -6,7 +6,7 @@ export function TodoList() {
 	const [list, setList] = useState([]);
 	const [task, setTask] = useState("");
 	const [error, setError] = useState(false);
-	const url = "https://assets.breatheco.de/apis/fake/todos/user/samvalvi";
+	const url = "https://assets.breatheco.de/apis/fake/todos/user/Lvargasp77";
 
 	const getList = () => {
 		fetch(url, {
@@ -85,7 +85,7 @@ export function TodoList() {
 		e.preventDefault();
 
 		if (task === "") {
-			setError("A task name is required");
+			setError("Se necesita una tarea");
 		} else {
 			setList([...list, { label: task, done: false }]);
 		}
@@ -94,8 +94,8 @@ export function TodoList() {
 
 	return (
 		<div className="container">
-			<div className="w-50 mx-auto shadow">
-				<h6 className="w-50 mx-auto fw-light text-danger">
+			<div className="w-50 mx-auto shadow bg-secondary bg-gradient">
+				<h6 className="w-50 mx-auto fw-light text-dark">
 					{error ? error : null}
 				</h6>
 
@@ -103,7 +103,7 @@ export function TodoList() {
 					<input
 						className="col list-group-item w-100"
 						type="text"
-						placeholder="What needs to be done?"
+						placeholder="Agregar tarea"
 						name="taskName"
 						value={task}
 						onChange={handleChange}
@@ -114,7 +114,7 @@ export function TodoList() {
 					<List list={list} deleteTask={deleteTask} />
 				</div>
 
-				<div className="footer bg-secondary">
+				<div className="footer m-3">
 					<Footer list={list} />
 				</div>
 			</div>
@@ -125,7 +125,7 @@ export function TodoList() {
 				<button
 					className="btn btn-secondary"
 					onClick={() => deleteTasks()}>
-					Delete All Tasks
+					Eliminar todas la tareas
 				</button>
 			</div>
 		</div>
