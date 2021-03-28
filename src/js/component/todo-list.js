@@ -50,7 +50,7 @@ export function TodoList() {
 
 	useEffect(() => {
 		updateList();
-	}, []);
+	}, [list]);
 
 	const handleChange = e => {
 		if (error) {
