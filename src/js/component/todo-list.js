@@ -125,7 +125,7 @@ export function TodoList() {
 				<button
 					className="btn btn-secondary"
 					onClick={() => deleteTasks()}>
-					Eliminar todas las tareas
+					Remover todas las tareas
 				</button>
 			</div>
 		</div>
